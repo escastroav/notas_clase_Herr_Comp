@@ -1,0 +1,8 @@
+exportar:
+set xlabel "N"
+set ylabel "%"
+Crear variable:
+set term "pdf" //leer en PDF
+set out "figura.pdf"
+Devolverse a terminal para seguir utilizando pdf
+set term x11
