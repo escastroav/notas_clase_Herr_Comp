@@ -1,6 +1,14 @@
 CXX = g++
 CXXFLAGS = -I
 OBJ = foo.o bar.o
+DEPS = foo.h bar.h
 
+%.o : %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+ 
 main.x : $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ main.cpp
+
+.PHONY: clean
+clean:
+	rm -f *.o *~ *.x 
