@@ -1,0 +1,6 @@
+CXX = g++
+CXXFLAGS = -I
+OBJ = foo.o bar.o
+
+main.x : $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^ main.cpp
