@@ -1,0 +1,27 @@
+Devolverse en git a una versión anterior:
+	   git checkout program.cpp
+
+Compiler       debugging	Optimize
+g++		-g 		-02
+
+diff: comando para comparar programas y ver similitudes.
+
+Compilación nueva:
+
+Compiler    warnings 
+g++ 	    -Wall
+
+Sanitizers (ayuda extra para solución de errores)
+
+
+	   	       Activar sanitizer
+g++  -Wall  -fsanitize=adress  -fanitize=undefined  program.cpp
+
+Salir de un comando de emacs
+
+C-g (Ctrl+g)
+
+
+
+
+
