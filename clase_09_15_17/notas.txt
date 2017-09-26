@@ -22,6 +22,64 @@ Salir de un comando de emacs
 C-g (Ctrl+g)
 
 
+Tutorial GDB
+
+compilación usando gdb:
+
+g++ -g -ggdb program.cpp -o program.x
+
+Con esto se crea un ejecutable que es debbugueable :v
+
+Correr gdb:
+
+gdb ./program.x
+
+Comandos:
+
+run <corre el programa hasta el primer breakpoint>
+
+print a <Revisar el valor que tiene la variable declarada a>
+
+print $a <Imprimir pero me da void... (?)>
+
+p /d a <Imprimir a en base decimal>
+
+p /t a <Imprimir a en base binaria>
+
+p /x a <Imprimir, supongo, dirección de memoria>
+
+
+ - Breakpoints:
+ 
+br n <Colocar breakpoint en línea n>
+
+br program.cpp:n <Colocar breakpoint, en la línea n> (no se ve al diferencia)
+
+br function_name <Colocar breakpoint cuando se hallamado la función function_name>
+
+info breakpoints <Revisar qué checkpoints tengo>
+
+delete n <Borrar el checkpoint n (el primero o el segundo... etc)>
+
+ignore n m <Ignorar el checkpoint n, m veces (para cuando uno tiene un breakpoint en un for y se quiere revisar la m-ésima iteración)>
+
+br program.cpp:n if locala == x <Colocar un breakpoint si se cumple que la variable local a tenga el valor x>
+
+ - Control de ejecucuión
+
+next <seguir ejecutando hasta la siguiente línea, ejeccutar explicitamente todo lo que contenga>
+
+step <seguir ejecutando, esta vez desde cada paso que realiza el programa (ejecutar una función paso a paso etc..)>
+
+ - Cosas raras que no sé para qué sirven.-... xD
+
+watch a <revisar un cambio en la variable a...>
+
+rwatch a <>
+
+
+
+
 
 
 
