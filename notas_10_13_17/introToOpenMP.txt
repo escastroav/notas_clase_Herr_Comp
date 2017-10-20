@@ -1,0 +1,32 @@
+Compile and tell compiler to use OpenMP:
+
+gcc -fopenmp program.c
+
+Tell how many cores to use: (just bash)
+
+export OMP_NUM_THREADS=4					
+
+
+Thread:
+
+A thread is consisted by dividing a sector of the stack of memory, to run parallely a program and it shares memory from the heap, even with other threads.
+
+Declare n threads to use:
+
+omp_set_num_threads(n);
+
+Fork:
+Create or separate a thread into multiple threads which runs a piece of code in a parallel way.
+
+Fork/split into a team of threads:
+
+#pragma omp parallel
+{
+	//some shit here();
+}
+
+Every memory allocated outside the pragma will be on the heap and every thread will have access to them.
+
+Measure time:
+
+double omp_get_wtime();
