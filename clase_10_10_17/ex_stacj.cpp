@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main()
+{
+  const int M = 7000;
+  const int N = 500;
+
+  double data[M][N] = {{0.0}};
+
+  std::cout << data[M/2][N/2] << std::endl;
+
+  return 0;
+}

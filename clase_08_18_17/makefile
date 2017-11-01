@@ -12,7 +12,7 @@ main.x : $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 .cpp.o:
-	$(CXX) -c -o $@ $< $(CXXFLAGS)
+	$(CXX) -c -o $@ $^ $(CXXFLAGS)
 
 .PHONY: clean
 clean: 

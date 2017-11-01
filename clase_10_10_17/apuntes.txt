@@ -1,0 +1,23 @@
+debugging:
+	-sanitizers
+	-gdb
+	-ddd (plots)
+	-valgrind (memcheck)
+	-distintos compiladores:
+		   *g++
+		   *gcc
+		   *clang
+
+profiling:
+	-gprof
+	-valgrind(cachegrind)
+	-google performance tools
+
+Optimización:
+	-(que el compilador lo haga por mí) -O0 / -O1 / -O2 / -O3 también se puede hacer debbuging con esto
+	-Nuevo algoritmo n^2 -> nlog(n) (requiere tiempo y esfuerzo pero se ahorra mucho tiempo)
+	-código amigable con la caché
+	-brach prediction (if cuya sentencia no se sabe si se cumple) (if's no son muy buenos)
+
+Paralelizar:
+	-Mejor utilizar librerías

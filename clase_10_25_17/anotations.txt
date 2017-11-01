@@ -1,0 +1,15 @@
+MPI:
+Una diferencia con MP es que cada procesador o máquina tiene su propio set de memoria. No se comparte memoria, todas las variables son privadas.
+
+-------------------------------------------
+
+
+compilar sin paralelizado con MPI:
+
+$ gcc program.c -lmpi
+
+$ mpicc program.c
+
+ejecutar en paralelo para x procesos:
+
+$ mpirun -np x ./a.out

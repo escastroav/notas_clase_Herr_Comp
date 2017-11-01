@@ -1,0 +1,4 @@
+1.x : 1.o
+	g++ 1.o -o 1.x
+
+#ESC x -> (M - x makefile-mode)
